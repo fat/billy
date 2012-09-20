@@ -5,6 +5,7 @@
     document.onmousemove = moveHandler; 
 
     document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
         animate(e.touches[0].pageX, e.touches[0].pageY)
     })
 
