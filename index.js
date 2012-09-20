@@ -1,8 +1,13 @@
 !function () {
 
-    document.write("<div class='divCanvas'><canvas id='myCanvas' style='display: block;' width="+window.innerWidth+" height="+window.innerHeight+"><img src='sup.jpeg' width='"+window.innerWidth+"px'></canvas></div>");
+    document.write("<div class='divCanvas'><canvas id='myCanvas' style='display: block;' width="+window.innerWidth+" height="+window.innerHeight+"><img src='sup.jpeg'></canvas></div>");
 
     document.onmousemove = moveHandler; 
+
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+        animate(e.touches[0].pageX, e.touches[0].pageY)
+    })
 
     var canvas = document.getElementById("myCanvas");
     var context = canvas.getContext("2d");
@@ -13,9 +18,9 @@
     }
 
     function animate (xPos, yPos) {
-        var imgObj  = new Image();
-        var w       = window.innerWidth;
-        var h       = window.innerHeight;
+        var imgObj = new Image();
+        var w      = window.innerWidth;
+        var h      = window.innerHeight;
 
         imgObj = context.getImageData(0, 0, xPos, yPos);
 
