@@ -1,6 +1,6 @@
 !function () {
 
-    document.write("<div class='divCanvas'><canvas id='myCanvas' style='display: block;' width="+window.innerWidth+" height="+window.innerHeight+"><img src='sup2.jpeg'></canvas></div>");
+    document.write("<div class='divCanvas'><canvas id='myCanvas' style='display: block;' width="+window.innerWidth+" height="+window.innerHeight+"><img src='sup.jpeg'></canvas></div>");
 
     document.onmousemove = moveHandler; 
 
@@ -51,6 +51,6 @@
             var destY = 0;
             context.drawImage(imgObj, destX, destY);
         }
-        imgObj.src = "sup2.jpeg";
+        imgObj.src = "sup.jpeg";
     }
 }();
