@@ -2,12 +2,12 @@
 
     document.write("<div class='divCanvas'><canvas id='myCanvas' style='display: block;' width="+window.innerWidth+" height="+window.innerHeight+"><img src='sup.jpeg'></canvas></div>");
 
-    document.onmousemove = moveHandler; 
+    	document.onmousemove = moveHandler; 
 
-    document.addEventListener('touchmove', function (e) {
-        e.preventDefault();
-        animate(e.touches[0].pageX, e.touches[0].pageY)
-    })
+    	document.addEventListener('touchmove', function (e) {
+        	e.preventDefault();
+        	animate(e.touches[0].pageX, e.touches[0].pageY)
+    	})
 
     var canvas = document.getElementById("myCanvas");
     var context = canvas.getContext("2d");
